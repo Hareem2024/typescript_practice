@@ -33,29 +33,33 @@ export class Calculator {
 }
 
 export class Cat {
+    // attribute: number
     private calories: number;
+    // name: string
     private name: string;
-    constructor(name:string){
-      this.name = name;
-      this.calories=0;
-    }
-    setName(name: string): void{
-      this.name=name;
-    }
-    eat(food: string):void{
-      if(food==='tuna')
-      {
-        this.calories = 50;
-      }
-      else (food==='salmon'){
-        this.calories=100;
-      }
-      else if()
-    }
-  }
-  
 
-  }
+    constructor(name: string) {
+      this.name = name;
+      this.calories = 0;
+    }
+
+    eat(food: string): void {
+      if(food === 'tuna') {
+        this.calories += 50;
+      }
+      else if (food === 'salmon'){
+        this.calories += 100;
+      }
+    }
+
+    sleep() {
+      this.calories -= 10; 
+    }
+
+    walks() {
+      this.calories -= 60;
+    }
+}
     
 
     // this is a cat (also called car) class.
