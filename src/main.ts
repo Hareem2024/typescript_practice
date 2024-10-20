@@ -1,39 +1,35 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-export function isEven(num: number): boolean {
-    return false;
+export function isEven(num:number):boolean {
+    return num%2==0;
 }
 
 export function isOdd(num: number): boolean {
-    return false;
+    return num%2==1;
 }
 
 
 export class Calculator {
     add(a: number, b: number): number {
-      return 0;
+      return a+b;
     }
   
     subtract(a: number, b: number): number {
-      return 0;
+      return a-b;
     }
   
     multiply(a: number, b: number): number {
-      return 0;
+      return a*b;
     }
   
     divide(a: number, b: number): number {
-      return 0;
+      if(b==0)
+        return 0;
+      return a/b;
     }
 
-    // Tasks:
-
-    // Task 1
-    // extend class to return the result of a modulo operation.
-    // inputs: number, modulo digit
-    // output: remainder
-
-    // Task 2
-    // write test for this function...
+    modulo(a: number, b: number): number {
+      return a%b;
+    }
 }
 
 export class Cat {
