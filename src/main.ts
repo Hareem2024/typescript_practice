@@ -35,6 +35,28 @@ export class Calculator {
 export class Cat {
     private calories: number;
     private name: string;
+    constructor(name:string){
+      this.name = name;
+      this.calories=0;
+    }
+    setName(name: string): void{
+      this.name=name;
+    }
+    eat(food: string):void{
+      if(food==='tuna')
+      {
+        this.calories = 50;
+      }
+      else (food==='salmon'){
+        this.calories=100;
+      }
+      else if()
+    }
+  }
+  
+
+  }
+    
 
     // this is a cat (also called car) class.
     // like a normal car, eat and also have a name.
