@@ -52,13 +52,31 @@ export class Cat {
       }
     }
 
-    sleep() {
-      this.calories -= 10; 
+    sleep(): void {
+      const SLEEP_CAL: number = 10;
+      if (this.calories <= SLEEP_CAL) {
+        throw Error("too few calories")
+      }
+      this.calories -= SLEEP_CAL;
     }
 
-    walks() {
-      this.calories -= 60;
+    walks(): void {
+      const WALK_CAL = 60;
+      if (this.calories <= WALK_CAL) {
+        throw Error("too few calories")
+      }
+      this.calories -= WALK_CAL;
     }
+
+    getCalories(): number {
+      return this.calories;
+    }
+}
+
+
+function catAdoptionCentre() {
+  const cat1 = new Cat("Momo");
+  cat1.walks();
 }
     
 
@@ -83,4 +101,3 @@ export class Cat {
 
     // some things to consider:
     // what happens if the cat has no calories and it tries to walk? What should we do?
-}
